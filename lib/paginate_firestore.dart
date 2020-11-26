@@ -26,6 +26,11 @@ class PaginateFirestore extends StatefulWidget {
     this.startAfterDocument,
     this.itemsPerPage = 15,
     this.onError,
+    this.gridView,
+    this.container,
+    this.column,
+    this.listView,
+    this.row,
     this.onReachedEnd,
     this.onLoaded,
     this.emptyDisplay = const EmptyDisplay(),
@@ -43,6 +48,11 @@ class PaginateFirestore extends StatefulWidget {
     this.footer,
   }) : super(key: key);
 
+  final Widget column;
+  final Widget row;
+  final Widget listView;
+  final Widget gridView;
+  final Widget container;
   final Widget bottomLoader;
   final Widget emptyDisplay;
   final SliverGridDelegate gridDelegate;
